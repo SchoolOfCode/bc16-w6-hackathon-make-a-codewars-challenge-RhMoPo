@@ -20,8 +20,8 @@ test("checkLEGOCompleteness function - Missing torso and headpiece", () => {
 });
 
 // Test when missing accessory
-test("checkLEGOCompleteness function - Missing accessory", () => {
- const description = "This LEGO figure has a pair of legs, a torso, a head, a hat";
+test("checkLEGOCompleteness function - Missing accessory and case sensitivity", () => {
+ const description = "This LEGO figure has a pair of Legs, a torso, a head, a hat";
  const expected = ["accessory"];
  const actual = checkLEGOCompleteness(description);
  expect(actual).toEqual(expected);
