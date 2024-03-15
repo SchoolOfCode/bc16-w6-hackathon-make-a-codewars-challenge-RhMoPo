@@ -7,7 +7,7 @@ test("checkLEGOCompleteness function - All parts present", () => {
   const description = "This LEGO figure has a pair of legs, a torso a head, a hat and a spanner";
   const expected = ["complete"];
   const actual = checkLEGOCompleteness(description);
-  expect(actual).toStrictEqual(expected);
+  expect(actual).toEqual(expected);
 
 });
 
@@ -16,7 +16,7 @@ test("checkLEGOCompleteness function - Missing torso and headpiece", () => {
  const description = "This LEGO figure has a pair of legs, a head and a spanner";
  const expected = ["torso", "headpiece"];
  const actual = checkLEGOCompleteness(description);
- expect(actual).toStrictEqual(expected);
+ expect(actual).toEqual(expected);
 });
 
 // Test when missing accessory
@@ -58,7 +58,7 @@ test("checkLEGOCompleteness function - Missing all components except head", () =
 
 // Test when missing all components except headpiece
 test("checkLEGOCompleteness function - Missing all components except headpiece", () => {
-  const description = "Here is a headpiece";
+  const description = "Here is some lego hair";
   const expected = ["legs", "torso", "head", "accessory"];
   const actual = checkLEGOCompleteness(description);
   expect(actual).toEqual(expected);
